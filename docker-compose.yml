@@ -3,7 +3,7 @@ services:
   my-node-user: 
     image: my-node-user:0.0.1 
     ports: 
-    - "8001:8000"
+    - "8001:8000" #HOST:CONTAINER
   my-node-manager: 
     image: my-node-manager:0.0.1 
     ports: 
