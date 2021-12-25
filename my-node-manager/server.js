@@ -6,7 +6,8 @@ const PORT = 8001;
 const HOST = '0.0.0.0';
 
 const app = express();
-app.get('/', (req, res) => {
+app.get('/manager', (req, res) => {
+    console.log("호출")
     res.send('hello manager');
 });
 
