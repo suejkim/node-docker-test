@@ -3,12 +3,17 @@ services:
   my-node-user: 
     image: my-node-user:0.0.1 
     ports: 
-    - "8001:8000"
+    - "8001:8000" #HOST:CONTAINER
   my-node-manager: 
     image: my-node-manager:0.0.1 
     ports: 
     - "8000:8001"
   nginx: 
-    image: my-nginx:0.0.1 
-    ports: 
-    - "8080:8080"
+    image: my-nginx:0.0.1
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - nginx-letsencrypt:/etc/letsencrypt 
+volumes:
+  nginx-letsencrypt:
