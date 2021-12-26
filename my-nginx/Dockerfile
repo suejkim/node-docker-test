@@ -28,7 +28,7 @@ RUN chmod +x /entrypoint.sh
 # COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./nginx/conf.d/nginx.conf /etc/nginx/nginx.conf 
 
-COPY ./nginx/project-lb.conf /etc/nginx/conf.d/project-lb.conf
+# COPY ./nginx/project-lb.conf /etc/nginx/conf.d/project-lb.conf
 
 # Something to serve
 # RUN mkdir /var/lib/website
